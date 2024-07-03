@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* .main{
+    margin: 100px 200px;
+    border: 2px solid gray;
+    padding: 20px;
+    background-color: burlywood;
+  } */
+ .buttons{
+  margin: 40px; 
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  color: white;
+ }
+  
+.custom-container {
+  @include make-container();
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>print all objects</title>
+    <link rel="stylesheet" href="../stylesheets/printmydata.css">
+</head>
+<body>
+    <div class="container1">
+        <div class="container2">
+            <div class="first-div">
+                <h2><%= myobj.note.substring(0,100) + "...." %></h2>
+            </div>
+            <div class="second-div">
+                <div class="buttons">
+                    <a href=<%= "/viewMore/" + myobj._id %>>View More</a>
+                    <a href="/">New Note</a>
+                    <a href="./allnotes">All Notes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All notes</title>
+    <link rel="stylesheet" href="../stylesheets/allnotes.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+</head>
+<body>
+        <div class="container">
+
+            
+            <% myobj.forEach(function(data){%> 
+                 
+                <div class="content">
+                    <h3><%= data.note.substring(0,100) + " ...." %></h3>
+                </div> 
+                <div class="buttons">
+                    <a href= <%= "/viewMore/" + data._id %> ><button type="button" class="btn btn-success"> view more</button></a>
+                   
+                    <a href= <%= "/delete/" + data._id %>><button type="button" class="btn btn-success"> delete</button></a>
+
+                    <a href="/"><button type="button" class="btn btn-success"> New note</button></a>
+                </div>
+
+             <%}) %>
+        </div>
+
+</body>
+</html>
